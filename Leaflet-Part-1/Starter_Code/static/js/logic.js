@@ -7,6 +7,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom:19,
 }).addTo(map);
 
+
+//Connects to geojson API using D3
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
     console.log(data); // Check the data structure in the console
     // Add logic to create GeoJSON layer here
